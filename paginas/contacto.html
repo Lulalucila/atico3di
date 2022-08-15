@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" href="../assets/img/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=NTR&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Maven+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Homenaje&family=Maven+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contacto</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../index.html" class="prelogo"><img src="../assets/img/logo-cuadrado.png" alt="logo Ático3d" width="35%"
+                class="logo"></a>        
+            <ul>
+                <li><a href="../index.html">Nosotros</a></li>
+                <li><a href="../paginas/impresiones3d.html">Impresiones 3D</a></li>
+                <li><a href="#">Diseño y Prototipado</a></li>
+                <li><a href="../paginas/equipamiento.html">Equipamiento</a></li>
+                <li><a href="../paginas/contacto.html">Contacto</a></li>
+            </ul>        
+    </nav>
+    <main>
+        <div>
+            <h1>CONTACTO</h1>
+        </div>
+        <div class="bloque">
+            <h2>Hacenos tu consulta</h2>
+            <p>No te quedes con la duda, si tenes una idea simple o flashera, un proyecto para alguna materia de la
+                facultad o se te rompió esa piecita fundamental de algún artefacto de tu casa. Escribinos todo con lujo  de detalle (real, extendete por completo), no perdés nada y a nosotros no nos cuesta responderte.</p>
+        </div>
+        <div class="bloqueF">
+            <h2>Formulario</h2>
+            <form action="" id="formularioContacto" method="post" netflify>
+                <div class="conjunto">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="nombre" placeholder="Juan Perez" required><br>                
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="tumail@tumail.com" required><br>                
+                    <label for="telefono">Telefono</label>
+                    <input  type="tel" name="telefono" placeholder="011 1234 5678"><br>
+                </div>          
+                <div class="conjunto">
+                    <fieldset>
+                        <legend>Colores</legend>
+                        <span>
+                            <label for="color">Rojo</label>
+                            <input type="checkbox" name="color" value="rojo">
+                        </span>
+                        <span>
+                            <label for="color">Naranja</label>
+                            <input type="checkbox" name="color" value="naranja">
+                        </span>
+                        <span>
+                            <label for="color">Violeta</label>
+                            <input type="checkbox" name="color" value="violeta">
+                        </span>
+                        <span>
+                            <label for="color">Negro</label>
+                            <input type="checkbox" name="color" value="negro">
+                        </span>
+                        <span>
+                            <label for="color">Blanco</label>
+                            <input type="checkbox" name="color" value="blanco">
+                        </span>
+                        <span>
+                            <label for="color">Verde</label>
+                            <input type="checkbox" name="color" value="verde">
+                        </span>
+                        <span>
+                            <label for="color">Azul</label>
+                            <input type="checkbox" name="color" value="azul">
+                        </span>
+                        <span>
+                            <label for="color">Otro</label>
+                            <input type="checkbox" name="color" value="otro"><br>
+                        </span>
+                    </fieldset>
+                </div>
+                <div class="conjunto">
+                <span>
+                    <label for="alto">Alto</label>
+                    <input type="number" name="alto" required>
+                </span>
+                <span>
+                    <label for="medicion">Unidad de Medida</label>
+                    <select name="medicion" required>
+                        <option value="cm">cm</option>
+                        <option value="mm">mm</option>
+                    </select>
+                    <br>
+                </span>
+                <span>
+                    <label for="ancho">Ancho</label>
+                    <input type="number" name="ancho" required>
+                </span>
+                <span>
+                    <label for="medicion">Unidad de Medida</label>
+                    <select name="medicion" required>
+                        <option value="cm">cm</option>
+                        <option value="mm">mm</option>
+                    </select>
+                    <br>
+                </span>
+                <span>
+                    <label for="profundidad">Profundidad</label>
+                    <input type="number" name="profundidad" required>
+                </span>
+                <span>
+                    <label for="medicion">Unidad de Medida</label>
+                    <select name="medicion" required>
+                        <option value="cm">cm</option>
+                        <option value="mm">mm</option>
+                    </select>
+                    <br>
+                </span>
+            </div>
+            <div>
+                    <label for="archivo">Adjuntar Imagen de referencia</label>
+                    <input type="file" name="archivo">
+            </div>
+            <br>
+            <div>
+                <label for="descripcion">Detallanos tu consulta o pedido</label><br>
+                <textarea name="descripcion" cols="55" rows="8" ></textarea><br>
+            </div>
+            <span >
+                <input type="submit" value="Enviar" class="boton">
+            </span>
+            <span >
+                <input type="reset" value="Reestablecer" class="boton">
+            </span>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <a href="#" class="flecha"><i class="fa-solid fa-circle-up"></i></a>
+        <div>
+            <h4>¡Seguinos en instagram!</h4>
+                <a href="https://www.instagram.com/atico.3d/" target="_blank"><i class="fa-brands fa-instagram"></i>
+            </a>            
+        </div>
+        <div>
+            <p class="copyright">Todos los derechos reservados por copyright</p>
+        </div>
+    </footer>
+</body>
+</html>
