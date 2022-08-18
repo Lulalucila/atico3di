@@ -201,6 +201,13 @@ h4{
     font-size: 40px;
     text-decoration: none;
     color: #fcec04 ;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
+}
+.animate__slideInLeft{
+    animation-duration: 3.5s;
+    animation-delay: 0.2s;
 }
 .flecha:hover{
     transform: scale(1.2);
@@ -212,6 +219,10 @@ footer{
 div a{
     color:#fcec04;
     font-size: 40px;
+}
+.fa-instagram:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
 }
 .copyright{
     font-size: 12px;
