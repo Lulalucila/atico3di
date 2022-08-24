@@ -1,195 +1,196 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: 0;
 }
-.bloqueG{
+
+.bloqueG {
     background-color: rgb(53, 53, 53, 0.5);
     margin: 0% 10%;
     column-gap: 5px;
     padding-bottom: 25px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "h2 h2"
-    "img p"
+        "h2 h2"
+        "img p"
 }
-main{
+
+main {
     text-align: center;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-.tituloP{
-    grid-area: h2; 
+
+.tituloP {
+    grid-area: h2;
 }
-nav{
+
+nav {
     width: 100%;
     height: 80px;
     background-color: black;
-    position:fixed;
+    position: fixed;
+    z-index: 3;
 }
-.prelogo{
+
+.prelogo {
     padding: 10px 15px;
 }
-.logo{
+
+.logo {
     height: 80px;
     width: auto;
 }
-nav ul{
+
+nav ul {
     float: right;
     margin-right: 20px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0px 5px;
 }
-nav ul li a{
-    list-style: none;    
+
+nav ul li a {
+    list-style: none;
     font-family: 'Contrail One', cursive;
     font-size: 20px;
     text-decoration: none;
-    color:white;
+    color: white;
     padding: 7px 10px;
 }
-li a:hover{
+
+li a:hover {
     color: #fcec04;
 }
-li:hover{
+
+li:hover {
     transform: scale(1.2);
     transition: all 0.3s;
 }
-.btn{
-    color:white;
+
+.btn {
+    color: white;
     font-size: 30px;
-    float:right;
+    float: right;
     line-height: 80px;
-margin-right: 40px;
-cursor:pointer;
-display: none;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
-#check{
-    display:none;
+
+#check {
+    display: none;
 }
-body{
-    background-image: url(../assets/img/fondo.jpg) ;
+
+body {
+    background-image: url(../assets/img/fondo.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
-.bloqueP{
+
+.bloqueP {
     background-color: rgb(53, 53, 53, 0.5);
-    padding: 5px 20px 20px 20px; 
+    padding: 5px 20px 20px 20px;
     margin: 30px 10% 5px 10%;
-    border-radius: 2%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "h2 h2 h2"
-    "img1 img2 img3";
+    border-radius: 2%;
     justify-items: center;
 }
-.tituloI{
-    grid-area: h2;    
+
+.carousel {
+    width: 80%;
+    margin-bottom: 5%;
 }
-.img{
+
+.img {
     margin: 5px;
 }
-.img1{
-    width: 23vw ;
-    height: 23vw;
-    grid-area: img1;
-    background-image: url(../assets/img/llavero-medallon-hercules.jpg) ;
-    background-size: cover;
-    background-position: center;
-}
-.img2{
-    width: 23vw ;
-    height: 23vw;
-    grid-area: img2;
-    background-image: url(../assets/img/maceta-bob-esponja.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.img3{
-    width: 23vw ;
-    height: 23vw;
-    grid-area: img3;
-    background-image: url(../assets/img/mini-michelin.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.bloque{
+
+.bloque {
     background-color: rgb(53, 53, 53, 0.5);
-    padding: 5px 20px 20px 20px; 
+    padding: 5px 20px 20px 20px;
     margin: 30px 10% 5px 10%;
     border-radius: 2%;
 }
-.bloqueF{
+
+.bloqueF {
     background-color: rgb(53, 53, 53, 0.5);
-    padding: 5px 20px 20px 20px; 
+    padding: 5px 20px 20px 20px;
     margin: 30px 10% 5px 10%;
     border-radius: 2%;
 }
-.filaUno{
+
+.filaUno {
     align-items: center;
     display: flex;
 }
-.impresora3D{   
+
+.impresora3D {
     width: auto;
     display: inline;
     align-items: center;
     grid-area: img;
-    background-image: url("../assets/img/imagen-impresora.jpg") ;
+    background-image: url("../assets/img/imagen-impresora.jpg");
     background-size: cover;
     background-position: right;
     margin-left: 15px;
 }
-#primerParrafo{
-    display:inline;
+
+#primerParrafo {
+    display: inline;
     text-align: left;
     padding-left: 30px;
     padding-right: 40px;
     grid-area: p;
 }
-h1{
+
+h1 {
     font-family: 'Homenaje', sans-serif;
     font-weight: bold;
     font-size: 50px;
-    color:white;
+    color: white;
     padding: 30px 10px 10px 10px;
     letter-spacing: 3px;
     word-spacing: 15px;
- 
+
 }
 
 
-h2{
+h2 {
     font-family: 'Homenaje';
     font-size: 50px;
     padding: 20px;
-    color:rgb(252, 236, 4, 0.9);
+    color: rgb(252, 236, 4, 0.9);
     -webkit-text-stroke: 0.8px black;
 }
-p{
+
+p {
     font-family: 'Maven Pro';
     font-size: 23px;
     padding: 0px 7%;
-    color:rgba(255, 255, 255, 0.875);
+    color: rgba(255, 255, 255, 0.875);
     letter-spacing: 0.8px;
     word-spacing: 3px;
     line-height: 30px;
 }
-h4{
+
+h4 {
     font-family: 'Maven Pro';
     font-weight: bold;
     font-size: 16px;
     padding: 20px;
-    color:white
+    color: white
 }
-.flecha{
-    height:  40px;
+
+.flecha {
+    height: 40px;
     width: 40px;
     position: fixed;
     bottom: 30px;
@@ -200,183 +201,276 @@ h4{
     line-height: 40px;
     font-size: 40px;
     text-decoration: none;
-    color: #fcec04 ;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.49);
+    color: #fcec04;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
 }
-.animate__slideInLeft{
+
+.animate__slideInLeft {
     animation-duration: 3.5s;
     animation-delay: 0.2s;
 }
-.flecha:hover{
+
+.flecha:hover {
     transform: scale(1.2);
     transition: all 0.5s;
 }
-footer{
+
+footer {
     text-align: center;
 }
-div a{
-    color:#fcec04;
+
+div a {
+    color: #fcec04;
     font-size: 40px;
 }
-.fa-instagram:hover{
+
+.fa-instagram:hover {
     transform: scale(1.2);
     transition: all 0.3s;
 }
-.copyright{
+
+.flecha:visited {
+    color: #fcec04;
+}
+
+.copyright {
     font-size: 12px;
     padding: 10px;
 }
-form{
-    color:white;
+
+form {
+    color: white;
     text-align: left;
     font-size: 20px;
-    font-family: 'Maven Pro';    
+    font-family: 'Maven Pro';
 }
-.conjunto{
+
+.conjunto {
     padding-bottom: 10px;
     line-height: 35px;
 }
-.boton{
-    background-color:#fcec04;
+
+.boton {
+    background-color: #fcec04;
     padding: 5px 10px;
+    border-radius: 10px;
 }
-.boton:hover{
-    background-color:#2e2e2eb7;
-    color:#fcec04;
-    transition :all 0.2s;
+
+.boton:hover {
+    background-color: #2e2e2eb7;
+    color: #fcec04;
+    transition: all 0.2s;
 
 }
-@media (max-width: 860px) {
-nav{
-    width: 100vw;
+
+ul {
+    padding-left: 0;
 }
-.bloqueG{
-    grid-template-columns: 1fr;
+
+.form-select {
+    width: auto;
+    display: inline;
+}
+
+.medidas {
+    width: 50px;
+    border-radius: 10%;
+    margin: 0% 2px;
+}
+
+.renglon {
+    margin: 3px 0%;
+}
+
+.input-group {
+    margin: 3px 0px;
+}
+
+.card-img-top {
+    width: 30vw;
+}
+
+.card {
+    width: 30vw;
+    margin: 5% 0px;
+}
+
+.row {
+    display: grid;
     grid-template-areas:
-    "h2"
-    "p";
-    padding: 20px 7%;
-}
-.impresora3D{
-    display: none;
-}
-nav ul li a{
-    font-size: 15px;
-    padding: 3px;
-}
-nav ul{
-    margin-right: 5px;
-}
-h1{
-    margin-top: 0px;
-}
-p{
-    padding:0px;
-}
-#primerParrafo{
-    justify-self: center;
-    background-image:url(../assets/img/imagen-impresora.jpg) ;
-    background-size: cover;
-    padding: 25px;
-    text-align: center;
-    backdrop-filter: brightness(20%);    
-}
-.bloque{
-    margin:5% 13%;
-}
-.bloqueP{
-    padding: 5px 5px 5px 5px; 
-    margin: 30px 3% 5px 3%;
-}
-.img{
-    height: 28vw;
-    width: 28vw;
-}
-.bloqueF{
-    margin: 10px 7%;
-}
-textarea{
-    max-width: 80vw;
-}
+        "img1 img2"
+        "img3 img4";
+    justify-items: center;
 }
 
-@media (max-width: 622px) {
-    .bloqueG{
-        padding: 0% 5% 5% 5%;
-        margin:  5%;
-        
+@media (max-width: 860px) {
+    nav {
+        width: 100vw;
     }
-nav{
-    z-index: 3;
+
+    .bloqueG {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h2"
+            "p";
+        padding: 20px 7%;
+    }
+
+    .impresora3D {
+        display: none;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 3px;
+    }
+
+    nav ul {
+        margin-right: 5px;
+    }
+
+    h1 {
+        margin-top: 0px;
+    }
+
+    p {
+        padding: 0px;
+    }
+
+    #primerParrafo {
+        justify-self: center;
+        background-image: url(../assets/img/imagen-impresora.jpg);
+        background-size: cover;
+        padding: 25px;
+        text-align: center;
+        backdrop-filter: brightness(20%);
+    }
+
+    .bloque {
+        margin: 5% 7%;
+    }
+
+    .bloqueP {
+        padding: 5px 5px 5px 5px;
+        margin: 5% 13%;
+    }
+
+    .img {
+        height: 28vw;
+        width: 28vw;
+    }
+
+    .bloqueF {
+        margin: 10px 7%;
+    }
+
+    textarea {
+        max-width: 80vw;
+    }
 }
-    li:hover{
+
+@media (max-width: 623px) {
+    .bloqueG {
+        padding: 0% 5% 5% 5%;
+        margin: 5%;
+
+    }
+
+    nav {
+        z-index: 3;
+    }
+
+    li:hover {
         transform: scale(1.5);
         transition: all 0.3s;
     }
-.bloque{
-    padding: 0% 5% 5% 5%;
-    margin: 5%;
-    z-index: 1;
-}
-.btn{
-    display: block;
-}
-p{
-    font-size: 18px;
-}
-h1{
-    font-size: 40px
-}
-h2{
-    font-size: 40px;
-}
-ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    top: 80px;
-    left:-100%;
-    text-align: center;
-    transition: all 0.5s;
-    
-   
-}
-nav ul li{
-    display: block;
-    margin: 50px 0px;
-    line-height: 30px;
-}
-nav ul li a{
-    font-size: 18px;
-}
-li a:hover, li a.active{
-    background: none ;
-    color:  #fcec04 ;
-}
-#check:checked ~ ul{
-    left:0;
-}
-.bloqueP{
-    grid-template-columns: 1fr ;
-    grid-template-areas: 
-    "h2"
-    "img1";
-    padding: 0% 5% 5% 5%;
-    margin: 5%;
-}
-.img2{
-    display: none;
-}
-.img3{
-    display: none;
-}
-    .img1{
-    width: 50vw;
-    height: 50vw;
-    margin-bottom: 20px;
-}
+
+    .bloque {
+        padding: 0% 5% 5% 5%;
+        margin: 5%;
+        z-index: 1;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 40px
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    li a:hover,
+    li a.active {
+        background: none;
+        color: #fcec04;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .bloqueP {
+        margin: 5%;
+        padding: 0%;
+    }
+
+    .row {
+        display: block;
+
+    }
+
+    .card-img-top {
+        width: 70vw;
+    }
+
+    .card-text {
+        width: 70vw;
+    }
+
+    .card {
+        align-items: center;
+    }
+
+    .row {
+        padding-left: 7%;
+    }
+
+    .card-title {
+        width: 70vw;
+    }
+
     /* agregar carrousel*/
 }

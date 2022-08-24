@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="shortcut icon" href="../assets/img/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=NTR&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Maven+Pro&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Homenaje&family=Maven+Pro&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=NTR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Maven+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Homenaje&family=Maven+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Contacto</title>
 </head>
 
@@ -23,15 +28,15 @@
         <label for="check" class="btn">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <a href="../index.html" class="prelogo"><img src="../assets/img/logo-cuadrado.png" alt="logo Ático3d" width="35%"
-                class="logo"></a>        
-            <ul>
-                <li><a href="../index.html">Nosotros</a></li>
-                <li><a href="../paginas/impresiones3d.html">Impresiones 3D</a></li>
-                <li><a href="#">Diseño y Prototipado</a></li>
-                <li><a href="../paginas/equipamiento.html">Equipamiento</a></li>
-                <li><a href="../paginas/contacto.html">Contacto</a></li>
-            </ul>        
+        <a href="../index.html" class="prelogo"><img src="../assets/img/logo-cuadrado.png" alt="logo Ático3d"
+                width="35%" class="logo"></a>
+        <ul>
+            <li><a href="../index.html">Nosotros</a></li>
+            <li><a href="../paginas/impresiones3d.html">Impresiones 3D</a></li>
+            <li><a href="#">Diseño y Prototipado</a></li>
+            <li><a href="../paginas/equipamiento.html">Equipamiento</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+        </ul>
     </nav>
     <main>
         <div>
@@ -40,19 +45,33 @@
         <div class="bloque">
             <h2>Hacenos tu consulta</h2>
             <p>No te quedes con la duda, si tenes una idea simple o flashera, un proyecto para alguna materia de la
-                facultad o se te rompió esa piecita fundamental de algún artefacto de tu casa. Escribinos todo con lujo  de detalle (real, extendete por completo), no perdés nada y a nosotros no nos cuesta responderte.</p>
+                facultad o se te rompió esa piecita fundamental de algún artefacto de tu casa. Escribinos todo con lujo
+                de detalle (real, extendete por completo), no perdés nada y a nosotros no nos cuesta responderte.</p>
         </div>
         <div class="bloqueF">
             <h2>Formulario</h2>
             <form action="" id="formularioContacto" method="post" netflify>
-                <div class="conjunto">
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" name="nombre" placeholder="Juan Perez" required><br>                
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" placeholder="tumail@tumail.com" required><br>                
-                    <label for="telefono">Telefono</label>
-                    <input  type="tel" name="telefono" placeholder="011 1234 5678"><br>
-                </div>          
+                <!-- empieza nombre y apellido-->
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Nombre y Apellido</span>
+                    <input type="text" class="form-control" placeholder="Juan Perez" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <!-- termina nombre y apellido-->
+                <!-- empieza email-->
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">E-mail</span>
+                    <input type="email" class="form-control" placeholder="tumail@tumail.com" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <!-- termina email-->
+                <!-- empieza telefono-->
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Telefono</span>
+                    <input type="tel" class="form-control" placeholder="011 1234 5678" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <!-- termina telefono-->
                 <div class="conjunto">
                     <fieldset>
                         <legend>Colores</legend>
@@ -91,58 +110,61 @@
                     </fieldset>
                 </div>
                 <div class="conjunto">
+                    <div class="renglon">
+                        <label for="alto">Alto</label>
+                        <input type="number" name="alto" class="medidas" required>
+                        <!-- empieza medida-->
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected> Unidad de Medida</option>
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                        </select>
+                        <!-- termina medida -->
+                        <br>
+                    </div>
+                    <div class="renglon">
+                        <label for="ancho">Ancho</label>
+                        <input type="number" name="ancho" class="medidas" required>
+                        <!-- empieza medida-->
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected> Unidad de Medida</option>
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                        </select>
+                        <!-- termina medida -->
+                        <br>
+                    </div>
+                    <div class="renglon">
+                        <label for="profundidad">Profundidad</label>
+                        <input type="number" name="profundidad" class="medidas" required>
+                        <!-- empieza medida-->
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected> Unidad de Medida</option>
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                        </select>
+                        <!-- termina medida -->
+                        <br>
+                    </div>
+                </div>
+                <!-- empieza Seleccionar archivo -->
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Adjuntar Imagen de referencia</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <!-- termina Seleccionar archivo-->
+                <!-- empiez textarea-->
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Detallanos tu consulta o pedido</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <!-- termina textarea-->
                 <span>
-                    <label for="alto">Alto</label>
-                    <input type="number" name="alto" required>
+                    <input type="submit" value="Enviar" class="boton">
                 </span>
                 <span>
-                    <label for="medicion">Unidad de Medida</label>
-                    <select name="medicion" required>
-                        <option value="cm">cm</option>
-                        <option value="mm">mm</option>
-                    </select>
-                    <br>
+                    <input type="reset" value="Reestablecer" class="boton">
                 </span>
-                <span>
-                    <label for="ancho">Ancho</label>
-                    <input type="number" name="ancho" required>
-                </span>
-                <span>
-                    <label for="medicion">Unidad de Medida</label>
-                    <select name="medicion" required>
-                        <option value="cm">cm</option>
-                        <option value="mm">mm</option>
-                    </select>
-                    <br>
-                </span>
-                <span>
-                    <label for="profundidad">Profundidad</label>
-                    <input type="number" name="profundidad" required>
-                </span>
-                <span>
-                    <label for="medicion">Unidad de Medida</label>
-                    <select name="medicion" required>
-                        <option value="cm">cm</option>
-                        <option value="mm">mm</option>
-                    </select>
-                    <br>
-                </span>
-            </div>
-            <div>
-                    <label for="archivo">Adjuntar Imagen de referencia</label>
-                    <input type="file" name="archivo">
-            </div>
-            <br>
-            <div>
-                <label for="descripcion">Detallanos tu consulta o pedido</label><br>
-                <textarea name="descripcion" cols="55" rows="8" ></textarea><br>
-            </div>
-            <span >
-                <input type="submit" value="Enviar" class="boton">
-            </span>
-            <span >
-                <input type="reset" value="Reestablecer" class="boton">
-            </span>
             </form>
         </div>
     </main>
@@ -150,12 +172,16 @@
         <a href="#" class="flecha"><i class="fa-solid fa-circle-up"></i></a>
         <div>
             <h4>¡Seguinos en instagram!</h4>
-                <a href="https://www.instagram.com/atico.3d/" target="_blank"><i class="fa-brands fa-instagram"></i>
-            </a>            
+            <a href="https://www.instagram.com/atico.3d/" target="_blank"><i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
         <div>
             <p class="copyright">Todos los derechos reservados por copyright</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
