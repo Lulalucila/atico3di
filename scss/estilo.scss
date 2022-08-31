@@ -7,10 +7,43 @@ $fuente3: 'Maven Pro';
 $padding1: 5px 20px 20px 20px;
 $margin1: 30px 10% 5px 10%;
 
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: 0;
+}
+h1 {
+    font-family: $fuente2, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    padding: 100px 10px 10px 10px;
+    letter-spacing: 3px;
+    word-spacing: 15px;
+}
+h2 {
+    font-family: $fuente2;
+    font-size: 50px;
+    padding: 20px;
+    color: rgb(252, 236, 4, 0.9);
+    -webkit-text-stroke: 0.8px black;
+}
+p {
+    font-family: $fuente3;
+    font-size: 23px;
+    padding: 0px 7%;
+    color: rgba(255, 255, 255, 0.875);
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+h4 {
+    font-family: $fuente3;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px;
+    color: white
 }
 .bloqueG {
     background-color: $colorBG;
@@ -38,10 +71,11 @@ nav {
     background-color: black;
     position: fixed;
     z-index: 3;
-    ul {
-        float: right;
+    display:flex;
+    ul {        
+        margin-left: auto;
         margin-right: 20px;
-        li {
+        li {            
             display: inline-block;
             line-height: 80px;
             margin: 0px 5px;
@@ -64,18 +98,19 @@ nav {
     }
 }
 .prelogo {
-    padding: 10px 15px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .logo {
-    height: 80px;
+    height: 80%;
     width: auto;
 }
 .btn {
+    margin-left: auto;
     color: white;
     font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+    line-height: 70px;
+    margin-right: 10px;
     cursor: pointer;
     display: none;
 }
@@ -111,6 +146,7 @@ body {
 .carousel-inner{
     width: 80vh;
 }
+
 #carouselExampleIndicators{
     width: 80vh;
 }
@@ -147,38 +183,7 @@ body {
     padding-right: 40px;
     grid-area: p;
 }
-h1 {
-    font-family: $fuente2, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    color: white;
-    padding: 100px 10px 10px 10px;
-    letter-spacing: 3px;
-    word-spacing: 15px;
-}
-h2 {
-    font-family: $fuente2;
-    font-size: 50px;
-    padding: 20px;
-    color: rgb(252, 236, 4, 0.9);
-    -webkit-text-stroke: 0.8px black;
-}
-p {
-    font-family: $fuente3;
-    font-size: 23px;
-    padding: 0px 7%;
-    color: rgba(255, 255, 255, 0.875);
-    letter-spacing: 0.8px;
-    word-spacing: 3px;
-    line-height: 30px;
-}
-h4 {
-    font-family: $fuente3;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 20px;
-    color: white
-}
+
 .flecha {
     height: 40px;
     width: 40px;
@@ -198,9 +203,10 @@ h4 {
     &:hover {
         transform: scale(1.2);
         transition: all 0.5s;
+        color: $color1
     }
-    &:visited {
-        color: $color1;
+    &:active {
+        transform: scale(1);
     }
 }
 .animate__slideInLeft {
@@ -214,10 +220,15 @@ div a {
     color: $color1;
     font-size: 40px;
 }
-.fa-instagram:hover {
+.fa-instagram{
+        &:hover {
     transform: scale(1.2);
     transition: all 0.3s;
+    color:$color1;
 }
+        &:visited {
+            color: $color1;}
+        }
 .copyright {
     font-size: 12px;
     padding: 10px;
@@ -231,6 +242,11 @@ form {
 .conjunto {
     padding-bottom: 10px;
     line-height: 35px;
+    }
+.conjunto1 {
+    justify-content: space-between;
+    display: flex;    
+    @extend .conjunto
 }
 .boton {
     background-color: $color1;
@@ -257,7 +273,7 @@ ul {
 .renglon {
     margin: 3px 0%;
     display: flex;
-   
+ 
 }
 .cuadro1{
     align-items: flex-end;
@@ -341,7 +357,17 @@ h5{
     textarea {
         max-width: 80vw;
     }
+    .renglon{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+    .conjunto1{
+        display: grid;
+        justify-content: left;
+    }
 }
+
 
 @media (max-width: 623px) {
     .bloqueG {
@@ -431,4 +457,10 @@ h5{
     #carouselExampleIndicators{
         width: 75vw;
     }
+    .cambio{
+        width: 100%;
+    }
+// actualizando y uno mas se actualiza
 }
+
+// @import "contacto";
