@@ -4,8 +4,16 @@ $colorBG: rgb(53, 53, 53, 0.5);
 $fuente1: 'Contrail One', cursive;
 $fuente2: 'Homenaje';
 $fuente3: 'Maven Pro';
+$fuente4: $fuente2, sans-serif;
 $padding1: 5px 20px 20px 20px;
 $margin1: 30px 10% 5px 10%;
+
+// Mapa
+$principales: (
+    55px: $fuente4,
+    50px: $fuente2,
+    23px: $fuente3,
+) ;
 
 
 * {
@@ -13,25 +21,30 @@ $margin1: 30px 10% 5px 10%;
     margin: 0;
     box-sizing: 0;
 }
+@each $size, $fuente in $principales{
+    .style--#{$size} {
+        font-size: $size;
+        font-family: $fuente;
+    }
+}
+@mixin dimension($width, $height){
+    height: $height;
+    width: $width;
+}
+
 h1 {
-    font-family: $fuente2, sans-serif;
     font-weight: bold;
-    font-size: 50px;
     color: white;
     padding: 100px 10px 10px 10px;
     letter-spacing: 3px;
     word-spacing: 15px;
 }
 h2 {
-    font-family: $fuente2;
-    font-size: 50px;
     padding: 20px;
     color: rgb(252, 236, 4, 0.9);
     -webkit-text-stroke: 0.8px black;
 }
 p {
-    font-family: $fuente3;
-    font-size: 23px;
     padding: 0px 7%;
     color: rgba(255, 255, 255, 0.875);
     letter-spacing: 0.8px;
@@ -66,8 +79,7 @@ html {
     grid-area: h2;
 }
 nav {
-    width: 100%;
-    height: 80px;
+    @include dimension(100%, 80px);
     background-color: black;
     position: fixed;
     z-index: 3;
@@ -102,8 +114,7 @@ nav {
     padding-left: 10px;
 }
 .logo {
-    height: 80%;
-    width: auto;
+    @include dimension(auto, 80%);
 }
 .btn {
     margin-left: auto;
@@ -139,8 +150,7 @@ body {
     margin: 5px;
 }
 .d-block{
-    height: 80vh;
-    width: 80vh;
+    @include dimension(80vh, 80vh);
     object-fit: cover;
 }
 .carousel-inner{
@@ -185,8 +195,7 @@ body {
 }
 
 .flecha {
-    height: 40px;
-    width: 40px;
+    @include dimension(40px, 40px);
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -232,6 +241,7 @@ div a {
 .copyright {
     font-size: 12px;
     padding: 10px;
+    font-family: $fuente3;
 }
 form {
     color: white;
@@ -348,8 +358,7 @@ h5{
         margin: 5% 13%;
     }
     .img {
-        height: 28vw;
-        width: 28vw;
+        @include dimension(28vw, 28vw);
     }
     .bloqueF {
         margin: 10px 7%;
@@ -399,9 +408,8 @@ h5{
         font-size: 40px;
     }
     ul {
+        @include dimension(100%, 100vh);
         position: fixed;
-        width: 100%;
-        height: 100vh;
         background: black;
         top: 80px;
         left: -100%;
@@ -447,8 +455,7 @@ h5{
         width: 70vw;
     }
     .d-block{
-        height: 75vw;
-        width: 75vw;
+        @include dimension(75vw, 75vw);
         object-fit: cover;
     }
     .carousel-inner{
@@ -460,7 +467,6 @@ h5{
     .cambio{
         width: 100%;
     }
-// actualizando y uno mas se actualiza
 }
 
 // @import "contacto";

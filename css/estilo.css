@@ -4,10 +4,23 @@
   box-sizing: 0;
 }
 
-h1 {
+.style--55px {
+  font-size: 55px;
   font-family: "Homenaje", sans-serif;
-  font-weight: bold;
+}
+
+.style--50px {
   font-size: 50px;
+  font-family: "Homenaje";
+}
+
+.style--23px {
+  font-size: 23px;
+  font-family: "Maven Pro";
+}
+
+h1 {
+  font-weight: bold;
   color: white;
   padding: 100px 10px 10px 10px;
   letter-spacing: 3px;
@@ -15,16 +28,12 @@ h1 {
 }
 
 h2 {
-  font-family: "Homenaje";
-  font-size: 50px;
   padding: 20px;
   color: rgba(252, 236, 4, 0.9);
   -webkit-text-stroke: 0.8px black;
 }
 
 p {
-  font-family: "Maven Pro";
-  font-size: 23px;
   padding: 0px 7%;
   color: rgba(255, 255, 255, 0.875);
   letter-spacing: 0.8px;
@@ -63,8 +72,8 @@ html {
 }
 
 nav {
-  width: 100%;
   height: 80px;
+  width: 100%;
   background-color: black;
   position: fixed;
   z-index: 3;
@@ -248,6 +257,7 @@ div a {
 .copyright {
   font-size: 12px;
   padding: 10px;
+  font-family: "Maven Pro";
 }
 
 form {
@@ -421,9 +431,9 @@ h5 {
     font-size: 40px;
   }
   ul {
-    position: fixed;
-    width: 100%;
     height: 100vh;
+    width: 100%;
+    position: fixed;
     background: black;
     top: 80px;
     left: -100%;
