@@ -49,6 +49,14 @@ h4 {
   color: white;
 }
 
+.pieFoto {
+  font-family: "Contrail One", cursive;
+  font-size: 23px;
+  color: #fcec04;
+  margin-top: 5px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
 .bloqueG {
   background-color: rgba(53, 53, 53, 0.5);
   margin: 0% 10%;
@@ -69,6 +77,16 @@ html {
 
 .tituloP {
   grid-area: h2;
+}
+
+.card-text {
+  font-family: "Homenaje";
+  font-size: 19px;
+}
+
+.card-img-top {
+  border: 5px solid #000000;
+  border-radius: 5px;
 }
 
 nav {
@@ -157,6 +175,10 @@ body {
   height: 80vh;
   width: 80vh;
   object-fit: cover;
+}
+
+.row {
+  --bs-gutter-x: 0rem;
 }
 
 .carousel-inner {
@@ -471,9 +493,6 @@ li a.active {
   }
   .card {
     align-items: center;
-  }
-  .row {
-    padding-left: 7%;
   }
   .card-title {
     width: 70vw;

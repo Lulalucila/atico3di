@@ -58,6 +58,14 @@ h4 {
     padding: 20px;
     color: white
 }
+.pieFoto{
+    font-family: $fuente1;
+    font-size: 23px;
+    color: $color1;
+    margin-top: 5px;
+    text-shadow: 2px 2px 2px #000000;;
+
+}
 .bloqueG {
     background-color: $colorBG;
     margin: 0% 10%;
@@ -77,6 +85,14 @@ html {
 }
 .tituloP {
     grid-area: h2;
+}
+.card-text{
+    font-family: $fuente2;
+    font-size: 19px;
+}
+.card-img-top{
+    border:5px solid #000000;
+    border-radius: 5px;
 }
 nav {
     @include dimension(100%, 80px);
@@ -152,6 +168,9 @@ body {
 .d-block{
     @include dimension(80vh, 80vh);
     object-fit: cover;
+}
+.row{
+        --bs-gutter-x: 0rem;
 }
 .carousel-inner{
     width: 80vh;
@@ -447,9 +466,6 @@ h5{
     }
     .card {
         align-items: center;
-    }
-    .row {
-        padding-left: 7%;
     }
     .card-title {
         width: 70vw;
