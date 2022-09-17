@@ -19,6 +19,20 @@
   font-family: "Maven Pro";
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fcec04;
+  border-radius: 3px;
+  border: 3px solid #fcec04;
+}
+
 h1 {
   font-weight: bold;
   color: white;
@@ -53,7 +67,6 @@ h4 {
   font-family: "Contrail One", cursive;
   font-size: 23px;
   color: #fcec04;
-  margin-top: 5px;
   text-shadow: 2px 2px 2px #000000;
 }
 
@@ -163,8 +176,7 @@ body {
 }
 
 .carousel {
-  width: 80%;
-  margin-bottom: 5%;
+  height: 60vh;
 }
 
 .img {
@@ -182,7 +194,20 @@ body {
 }
 
 .carousel-inner {
-  width: 80vh;
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+.carousel-item img {
+  height: 70%;
+  width: auto;
+  margin: auto;
+}
+.carousel-item p {
+  height: 30%;
+  padding: 10px 20px;
 }
 
 #carouselExampleIndicators {
@@ -236,7 +261,8 @@ body {
   border-radius: 30px;
 }
 .pull-right .ir {
-  padding: 2px 6px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: #fcec04;
   font-size: 20px;
@@ -414,6 +440,14 @@ h5 {
   padding-left: 0;
 }
 
+.flex-nowrap {
+  margin-bottom: 10px;
+}
+
+.colores {
+  margin-right: 18px;
+}
+
 @media (max-width: 860px) {
   nav {
     width: 100vw;
@@ -580,6 +614,11 @@ li a.active {
   }
   .barra {
     width: 70vw;
+  }
+}
+@media (max-width: 509px) {
+  .ir {
+    margin-top: 10px;
   }
 }
 

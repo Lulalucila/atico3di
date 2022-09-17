@@ -31,7 +31,17 @@ $principales: (
     height: $height;
     width: $width;
 }
-
+body::-webkit-scrollbar {
+    width: 12px;               
+}  
+body::-webkit-scrollbar-track {
+    background: black;       
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $color1;    
+    border-radius: 3px;      
+    border: 3px solid $color1; 
+}
 h1 {
     font-weight: bold;
     color: white;
@@ -62,7 +72,6 @@ h4 {
     font-family: $fuente1;
     font-size: 23px;
     color: $color1;
-    margin-top: 5px;
     text-shadow: 2px 2px 2px #000000;;
 
 }
@@ -159,8 +168,8 @@ body {
     justify-items: center;
 }
 .carousel {
-    width: 80%;
-    margin-bottom: 5%;
+    height: 60vh;
+
 }
 .img {
     margin: 5px;
@@ -173,9 +182,20 @@ body {
         --bs-gutter-x: 0rem;
 }
 .carousel-inner{
-    width: 80vh;
+    height: 100%;    
 }
-
+.carousel-item{
+    height: 100%;
+    img{
+        height: 70%;
+        width: auto;
+        margin: auto;
+    }
+    p{
+        height: 30%;
+        padding: 10px 20px;
+    }
+}
 #carouselExampleIndicators{
     width: 80vh;
 }
@@ -220,7 +240,8 @@ body {
         border-radius: 30px;
     }
     .ir{
-        padding: 2px 6px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         background-color:$color1;
         font-size: 20px;
@@ -381,6 +402,12 @@ h5{
 }
 .ladoUno{
     padding-left: 0;
+}
+.flex-nowrap{
+    margin-bottom: 10px;
+}
+.colores{
+    margin-right: 18px;
 }
 @media (max-width: 860px) {
     nav {
@@ -551,4 +578,10 @@ h5{
     .barra{
         width: 70vw;
     }
+}
+@media (max-width: 509px) {
+.ir{
+
+    margin-top: 10px;
+}
 }
