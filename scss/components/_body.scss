@@ -1,0 +1,85 @@
+
+// Variables
+$color1:#fcec04;
+$colorBG: rgb(53, 53, 53, 0.5);
+$fuente1: 'Contrail One', cursive;
+$fuente2: 'Homenaje';
+$fuente3: 'Maven Pro';
+$fuente4: $fuente2, sans-serif;
+$padding1: 5px 20px 20px 20px;
+$margin1: 30px 10% 5px 10%;
+$sombra: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+
+// Mapa
+$principales: (
+    55px: $fuente4,
+    50px: $fuente2,
+    23px: $fuente3,
+) ;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+
+@each $size, $fuente in $principales{
+    .style--#{$size} {
+        font-size: $size;
+        font-family: $fuente;
+    }
+}
+@mixin dimension($width, $height){
+    width: $width;
+    height: $height;
+}
+body::-webkit-scrollbar {
+    width: 12px;               
+}  
+body::-webkit-scrollbar-track {
+    background: black;       
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $color1;    
+    border-radius: 3px;      
+    border: 3px solid $color1; 
+}
+main {
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1 {
+    font-weight: bold;
+    color: white;
+    padding: 100px 10px 10px 10px;
+    letter-spacing: 3px;
+    word-spacing: 15px;
+}
+h2 {
+    padding: 20px;
+    color: rgb(252, 236, 4, 0.9);
+    -webkit-text-stroke: 0.8px black;
+}
+p {
+    padding: 0px 7%;
+    color: rgba(255, 255, 255, 0.875);
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+h4 {
+    font-family: $fuente3;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px;
+    color: white;
+}
+body {
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}

@@ -1,0 +1,14 @@
+.bloqueG {
+    background-color: $colorBG;
+    margin: 0% 10%;
+    column-gap: 5px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "h2 h2"
+        "img p"
+}
+.tituloP {
+    grid-area: h2;
+}

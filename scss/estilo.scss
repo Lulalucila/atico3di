@@ -102,6 +102,9 @@ html {
 .card-img-top{
     border:5px solid #000000;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+    width: 50vh;
+    margin: auto;
 }
 nav {
     @include dimension(100%, 80px);
@@ -173,6 +176,7 @@ body {
 }
 .img {
     margin: 5px;
+    
 }
 .d-block{
     @include dimension(80vh, 80vh);
@@ -190,6 +194,7 @@ body {
         height: 70%;
         width: auto;
         margin: auto;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
     }
     p{
         height: 30%;
@@ -290,6 +295,7 @@ body {
     margin: auto;
     margin-top: 15px;
     align-self: center;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
 }
 .animate__slideInLeft {
     animation-duration: 3.5s;
@@ -343,6 +349,7 @@ form {
     margin: 0px 20px;
     height: 70vh;
     border: 3px solid #000000;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49)
 }
 .boton {
     background-color: $color1;
@@ -381,9 +388,6 @@ justify-content: start;
 .input-group {
     margin: 3px 0px;
 }
-.card-img-top {
-    width: 30vw;
-}
 .card {
     width: 30vw;
     margin: 5% 0px;
@@ -408,6 +412,9 @@ h5{
 }
 .colores{
     margin-right: 18px;
+}
+.aqui{
+    color: $color1;
 }
 @media (max-width: 860px) {
     nav {
@@ -438,7 +445,7 @@ h5{
     }
     #primerParrafo {
         justify-self: center;
-        background-image: url(../assets/img/imagen-impresora.jpg);
+        background-image: url(../assets/img/imagen-impresora-opaca.jpg);
         background-size: cover;
         padding: 25px;
         text-align: center;
@@ -450,6 +457,9 @@ h5{
     .bloqueP {
         padding: 5px 5px 5px 5px;
         margin: 5% 13%;
+    }
+    .card-img-top{
+        width: 100%;
     }
     .img {
         @include dimension(28vw, 28vw);
@@ -478,6 +488,7 @@ h5{
     .filamento{
         width: 73vw;
         height: 40vh;
+        
     }
 
 }
@@ -543,18 +554,24 @@ h5{
     }
     .row {
         display: block;
+        
     }
     .card-img-top {
-        width: 70vw;
+        width: 60vw;
     }
     .card-text {
-        width: 70vw;
+        width: 100%;
     }
     .card {
         align-items: center;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        
+
     }
     .card-title {
-        width: 70vw;
+        width: 100%;
     }
     .d-block{
         @include dimension(75vw, 75vw);
@@ -571,9 +588,6 @@ h5{
     }
     .slowmo{
         display:none;
-    }
-    .card{
-        margin-left: 5%;
     }
     .barra{
         width: 70vw;

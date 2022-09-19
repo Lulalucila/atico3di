@@ -1,0 +1,24 @@
+.pieFoto{
+    font-family: $fuente1;
+    font-size: 23px;
+    color: $color1;
+    text-shadow: 2px 2px 2px #000000;
+}
+.bloqueP {
+    background-color: $colorBG;
+    padding: $padding1;
+    margin: $margin1;
+    display: grid;
+    border-radius: 2%;
+    justify-items: center;
+}
+.carousel {
+    height: 60vh;
+}
+.img {
+    margin: 5px;
+}
+.d-block{
+    @include dimension(80vh, 80vh);
+    object-fit: cover;
+}
