@@ -1,216 +1,21 @@
-// Variables
-$color1:#fcec04;
-$colorBG: rgb(53, 53, 53, 0.5);
-$fuente1: 'Contrail One', cursive;
-$fuente2: 'Homenaje';
-$fuente3: 'Maven Pro';
-$fuente4: $fuente2, sans-serif;
-$padding1: 5px 20px 20px 20px;
-$margin1: 30px 10% 5px 10%;
 
-// Mapa
-$principales: (
-    55px: $fuente4,
-    50px: $fuente2,
-    23px: $fuente3,
-) ;
+@import "./components/body";
+@import "./components/header";
+@import "./components/footer";
+
+@import "./pages/index";
+@import "./pages/impresiones3d";
+@import "./pages/equipamiento";
+@import "./pages/contacto";
+@import "./pages/prototipado";
 
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: 0;
-}
-@each $size, $fuente in $principales{
-    .style--#{$size} {
-        font-size: $size;
-        font-family: $fuente;
-    }
-}
-@mixin dimension($width, $height){
-    height: $height;
-    width: $width;
-}
-body::-webkit-scrollbar {
-    width: 12px;               
-}  
-body::-webkit-scrollbar-track {
-    background: black;       
-}
-body::-webkit-scrollbar-thumb {
-    background-color: $color1;    
-    border-radius: 3px;      
-    border: 3px solid $color1; 
-}
-h1 {
-    font-weight: bold;
-    color: white;
-    padding: 100px 10px 10px 10px;
-    letter-spacing: 3px;
-    word-spacing: 15px;
-}
-h2 {
-    padding: 20px;
-    color: rgb(252, 236, 4, 0.9);
-    -webkit-text-stroke: 0.8px black;
-}
-p {
-    padding: 0px 7%;
-    color: rgba(255, 255, 255, 0.875);
-    letter-spacing: 0.8px;
-    word-spacing: 3px;
-    line-height: 30px;
-}
-h4 {
-    font-family: $fuente3;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 20px;
-    color: white
-}
-.pieFoto{
-    font-family: $fuente1;
-    font-size: 23px;
-    color: $color1;
-    text-shadow: 2px 2px 2px #000000;;
 
-}
-.bloqueG {
-    background-color: $colorBG;
-    margin: 0% 10%;
-    column-gap: 5px;
-    padding-bottom: 25px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-        "h2 h2"
-        "img p"
-}
-main {
-    text-align: center;
-}
-html {
-    scroll-behavior: smooth;
-}
-.tituloP {
-    grid-area: h2;
-}
-.card-text{
-    font-family: $fuente2;
-    font-size: 19px;
-}
-.card-img-top{
-    border:5px solid #000000;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    width: 50vh;
-    margin: auto;
-}
-nav {
-    @include dimension(100%, 80px);
-    background-color: black;
-    position: fixed;
-    z-index: 3;
-    display:flex;
-    ul {        
-        margin-left: auto;
-        margin-right: 20px;
-        li {            
-            display: inline-block;
-            line-height: 80px;
-            margin: 0px 5px;
-            &:hover {
-                transform: scale(1.2);
-                transition: all 0.3s;
-            }
-            a {
-                list-style: none;
-                font-family: $fuente1 ;
-                font-size: 20px;
-                text-decoration: none;
-                color: white;
-                padding: 7px 10px;
-                &:hover {
-                    color: $color1;
-                }
-            }
-        }
-    }
-}
-.prelogo {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-.logo {
-    @include dimension(auto, 80%);
-}
-.btn {
-    margin-left: auto;
-    color: white;
-    font-size: 30px;
-    line-height: 70px;
-    margin-right: 10px;
-    cursor: pointer;
-    display: none;
-}
-#check {
-    display: none;
-}
-body {
-    background-image: url(../assets/img/fondo.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-.bloqueP {
-    background-color: $colorBG;
-    padding: $padding1;
-    margin: $margin1;
-    display: grid;
-    border-radius: 2%;
-    justify-items: center;
-}
-.carousel {
-    height: 60vh;
 
-}
-.img {
-    margin: 5px;
-    
-}
-.d-block{
-    @include dimension(80vh, 80vh);
-    object-fit: cover;
-}
 .row{
         --bs-gutter-x: 0rem;
 }
-.carousel-inner{
-    height: 100%;    
-}
-.carousel-item{
-    height: 100%;
-    img{
-        height: 70%;
-        width: auto;
-        margin: auto;
-        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    }
-    p{
-        height: 30%;
-        padding: 10px 20px;
-    }
-}
-#carouselExampleIndicators{
-    width: 80vh;
-}
 .bloque {
-    background-color: $colorBG;
-    padding: $padding1;
-    margin: $margin1;
-    border-radius: 2%;
-}
-.bloqueF {
     background-color: $colorBG;
     padding: $padding1;
     margin: $margin1;
@@ -220,16 +25,6 @@ body {
     align-items: center;
     display: flex;
 }
-.impresora3D {
-    width: auto;
-    display: inline;
-    align-items: center;
-    grid-area: img;
-    background-image: url("../assets/img/imagen-impresora.jpg");
-    background-size: cover;
-    background-position: right;
-    margin-left: 15px;
-}
 #primerParrafo {
     display: inline;
     text-align: left;
@@ -237,129 +32,19 @@ body {
     padding-right: 40px;
     grid-area: p;
 }
-.pull-right{
-    text-align: center;
-    .barra{
-        padding: 5px 13px;
-        outline: none;
-        border-radius: 30px;
-    }
-    .ir{
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background-color:$color1;
-        font-size: 20px;
-        font-family: $fuente3;
-        border: 2px solid #000000;
-        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-        &:hover{
-            background-color: #2e2e2eb7;
-            color: $color1;
-            transition: all 0.2s;        
-        }
-
-    }
-}
-
-.flecha {
-    @include dimension(40px, 40px);
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border-radius: 50%;
-    size: 120px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 40px;
-    text-decoration: none;
-    color: $color1;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    &:hover {
-        transform: scale(1.2);
-        transition: all 0.5s;
-        color: $color1
-    }
-    &:active {
-        transform: scale(1);
-    }
-}
-.filamento{
-    background-image: url(../assets/img/filamento.jpg);
-    background-repeat: no-repeat;
-    width: 60vw;
-    height: 40vh;
-    background-size: cover; 
-    margin: auto;
-    margin-top: 15px;
-    align-self: center;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-}
 .animate__slideInLeft {
     animation-duration: 3.5s;
     animation-delay: 0.2s;
-}
-footer {
-    text-align: center;
 }
 div a {
     color: $color1;
     font-size: 40px;
 }
-.fa-instagram{
-        &:hover {
-    transform: scale(1.2);
-    transition: all 0.3s;
-    color:$color1;
-}
-        &:visited {
-            color: $color1;}
-        }
-.copyright {
-    font-size: 12px;
-    padding: 10px;
-    font-family: $fuente3;
-}
-form {
-    color: white;
-    text-align: left;
-    font-size: 20px;
-    font-family: $fuente3;
-}
-.conjunto {
-    padding-bottom: 10px;
-    line-height: 35px;
-    }
-.conjunto1 {
-    justify-content: space-between;
-    display: flex;    
-    @extend .conjunto
-}
 .delado{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
     margin: 5px 5%;
-}
-
-.slowmo{
-    margin: 0px 20px;
-    height: 70vh;
-    border: 3px solid #000000;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49)
-}
-.boton {
-    background-color: $color1;
-    padding: 5px 10px;
-    border-radius: 10px;
-    &:hover {
-        background-color: #2e2e2eb7;
-        color: $color1;
-        transition: all 0.2s;    
-    }
 }
 ul {
     padding-left: 0;
@@ -368,15 +53,10 @@ ul {
     width: auto;
     display: inline;
 }
-.medidas {
-    width: 50px;
-    border-radius: 10%;
-    margin: 0% 2px;
-}
+
 .renglon {
     margin: 3px 0%;
-    display: flex;
- 
+    display: flex; 
 }
 .cuadro1{
     align-items: flex-end;
@@ -399,23 +79,13 @@ justify-content: start;
         "img3 img4";
     justify-items: center;
 }
-h5{
-    font-family: $fuente1;
-    font-size: 22px;
-    color: $color1;
-}
-.ladoUno{
-    padding-left: 0;
-}
+
+
 .flex-nowrap{
     margin-bottom: 10px;
 }
-.colores{
-    margin-right: 18px;
-}
-.aqui{
-    color: $color1;
-}
+
+
 @media (max-width: 860px) {
     nav {
         width: 100vw;

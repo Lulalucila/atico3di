@@ -1,0 +1,54 @@
+nav {
+    @include dimension(100%, 80px);
+    background-color: black;
+    position: fixed;
+    z-index: 3;
+    display:flex;
+    ul {        
+        margin-left: auto;
+        margin-right: 20px;
+        li {            
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+            &:hover {
+                transform: scale(1.2);
+                transition: all 0.3s;
+            }
+            a {
+                list-style: none;
+                font-family: $fuente1 ;
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                padding: 7px 10px;
+                &:hover {
+                    color: $color1;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    margin-left: auto;
+    color: white;
+    font-size: 30px;
+    line-height: 70px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+.aqui{
+    color: $color1;
+}
+.prelogo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.logo {
+    @include dimension(auto, 80%);
+}

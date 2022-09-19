@@ -22,3 +22,49 @@
     @include dimension(80vh, 80vh);
     object-fit: cover;
 }
+.carousel {
+    height: 60vh;
+}
+.carousel-inner{
+    height: 100%;    
+}
+.carousel-item{
+    height: 100%;
+    img{
+        height: 70%;
+        width: auto;
+        margin: auto;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+    }
+    p{
+        height: 30%;
+        padding: 10px 20px;
+    }
+}
+#carouselExampleIndicators{
+    width: 80vh;
+}
+.pull-right{
+    text-align: center;
+    .barra{
+        padding: 5px 13px;
+        outline: none;
+        border-radius: 30px;
+    }
+    .ir{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color:$color1;
+        font-size: 20px;
+        font-family: $fuente3;
+        border: 2px solid #000000;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+        &:hover{
+            background-color: #2e2e2eb7;
+            color: $color1;
+            transition: all 0.2s;        
+        }
+
+    }
+}

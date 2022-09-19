@@ -12,3 +12,13 @@
 .tituloP {
     grid-area: h2;
 }
+.impresora3D {
+    width: auto;
+    display: inline;
+    align-items: center;
+    grid-area: img;
+    background-image: url("../assets/img/imagen-impresora.jpg");
+    background-size: cover;
+    background-position: right;
+    margin-left: 15px;
+}

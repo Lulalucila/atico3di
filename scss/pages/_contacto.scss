@@ -1,0 +1,39 @@
+.boton {
+    background-color: $color1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    &:hover {
+        background-color: #2e2e2eb7;
+        color: $color1;
+        transition: all 0.2s;    
+    }
+}
+.bloqueF {
+    background-color: $colorBG;
+    padding: $padding1;
+    margin: $margin1;
+    border-radius: 2%;
+}
+.conjunto {
+    padding-bottom: 10px;
+    line-height: 35px;
+    }
+.conjunto1 {
+    justify-content: space-between;
+    display: flex;    
+    @extend .conjunto
+}
+form {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: $fuente3;
+}
+.colores{
+    margin-right: 18px;
+}
+.medidas {
+    width: 50px;
+    border-radius: 10%;
+    margin: 0% 2px;
+}

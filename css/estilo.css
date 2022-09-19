@@ -33,6 +33,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #fcec04;
 }
 
+main {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-weight: bold;
   color: white;
@@ -63,51 +71,22 @@ h4 {
   color: white;
 }
 
-.pieFoto {
+h5 {
   font-family: "Contrail One", cursive;
-  font-size: 23px;
+  font-size: 22px;
   color: #fcec04;
-  text-shadow: 2px 2px 2px #000000;
 }
 
-.bloqueG {
-  background-color: rgba(53, 53, 53, 0.5);
-  margin: 0% 10%;
-  column-gap: 5px;
-  padding-bottom: 25px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "h2 h2" "img p";
-}
-
-main {
-  text-align: center;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.tituloP {
-  grid-area: h2;
-}
-
-.card-text {
-  font-family: "Homenaje";
-  font-size: 19px;
-}
-
-.card-img-top {
-  border: 5px solid #000000;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  width: 50vh;
-  margin: auto;
+body {
+  background-image: url(../assets/img/fondo.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 nav {
-  height: 80px;
   width: 100%;
+  height: 80px;
   background-color: black;
   position: fixed;
   z-index: 3;
@@ -138,16 +117,6 @@ nav ul li a:hover {
   color: #fcec04;
 }
 
-.prelogo {
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.logo {
-  height: 80%;
-  width: auto;
-}
-
 .btn {
   margin-left: auto;
   color: white;
@@ -162,11 +131,95 @@ nav ul li a:hover {
   display: none;
 }
 
-body {
-  background-image: url(../assets/img/fondo.jpg);
+.aqui {
+  color: #fcec04;
+}
+
+.prelogo {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.logo {
+  width: auto;
+  height: 80%;
+}
+
+footer {
+  text-align: center;
+}
+
+.fa-instagram:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+  color: #fcec04;
+}
+.fa-instagram:visited {
+  color: #fcec04;
+}
+
+.copyright {
+  font-size: 12px;
+  padding: 10px;
+  font-family: "Maven Pro";
+}
+
+.flecha {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  size: 120px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #fcec04;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+}
+.flecha:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  color: #fcec04;
+}
+.flecha:active {
+  transform: scale(1);
+}
+
+.bloqueG {
+  background-color: rgba(53, 53, 53, 0.5);
+  margin: 0% 10%;
+  column-gap: 5px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h2 h2" "img p";
+}
+
+.tituloP {
+  grid-area: h2;
+}
+
+.impresora3D {
+  width: auto;
+  display: inline;
+  align-items: center;
+  grid-area: img;
+  background-image: url("../assets/img/imagen-impresora.jpg");
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: right;
+  margin-left: 15px;
+}
+
+.pieFoto {
+  font-family: "Contrail One", cursive;
+  font-size: 23px;
+  color: #fcec04;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .bloqueP {
@@ -187,13 +240,13 @@ body {
 }
 
 .d-block {
-  height: 80vh;
   width: 80vh;
+  height: 80vh;
   object-fit: cover;
 }
 
-.row {
-  --bs-gutter-x: 0rem;
+.carousel {
+  height: 60vh;
 }
 
 .carousel-inner {
@@ -216,44 +269,6 @@ body {
 
 #carouselExampleIndicators {
   width: 80vh;
-}
-
-.bloque {
-  background-color: rgba(53, 53, 53, 0.5);
-  padding: 5px 20px 20px 20px;
-  margin: 30px 10% 5px 10%;
-  border-radius: 2%;
-}
-
-.bloqueF {
-  background-color: rgba(53, 53, 53, 0.5);
-  padding: 5px 20px 20px 20px;
-  margin: 30px 10% 5px 10%;
-  border-radius: 2%;
-}
-
-.filaUno {
-  align-items: center;
-  display: flex;
-}
-
-.impresora3D {
-  width: auto;
-  display: inline;
-  align-items: center;
-  grid-area: img;
-  background-image: url("../assets/img/imagen-impresora.jpg");
-  background-size: cover;
-  background-position: right;
-  margin-left: 15px;
-}
-
-#primerParrafo {
-  display: inline;
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 40px;
-  grid-area: p;
 }
 
 .pull-right {
@@ -280,32 +295,6 @@ body {
   transition: all 0.2s;
 }
 
-.flecha {
-  height: 40px;
-  width: 40px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  border-radius: 50%;
-  size: 120px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #fcec04;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-}
-.flecha:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
-  color: #fcec04;
-}
-.flecha:active {
-  transform: scale(1);
-}
-
 .filamento {
   background-image: url(../assets/img/filamento.jpg);
   background-repeat: no-repeat;
@@ -318,64 +307,15 @@ body {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
 }
 
-.animate__slideInLeft {
-  animation-duration: 3.5s;
-  animation-delay: 0.2s;
-}
-
-footer {
-  text-align: center;
-}
-
-div a {
-  color: #fcec04;
-  font-size: 40px;
-}
-
-.fa-instagram:hover {
-  transform: scale(1.2);
-  transition: all 0.3s;
-  color: #fcec04;
-}
-.fa-instagram:visited {
-  color: #fcec04;
-}
-
-.copyright {
-  font-size: 12px;
-  padding: 10px;
-  font-family: "Maven Pro";
-}
-
-form {
-  color: white;
-  text-align: left;
-  font-size: 20px;
-  font-family: "Maven Pro";
-}
-
-.conjunto, .conjunto1 {
-  padding-bottom: 10px;
-  line-height: 35px;
-}
-
-.conjunto1 {
-  justify-content: space-between;
-  display: flex;
-}
-
-.delado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 5%;
-}
-
 .slowmo {
   margin: 0px 20px;
   height: 70vh;
   border: 3px solid #000000;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
+.ladoUno {
+  padding-left: 0;
 }
 
 .boton {
@@ -389,6 +329,94 @@ form {
   transition: all 0.2s;
 }
 
+.bloqueF {
+  background-color: rgba(53, 53, 53, 0.5);
+  padding: 5px 20px 20px 20px;
+  margin: 30px 10% 5px 10%;
+  border-radius: 2%;
+}
+
+.conjunto, .conjunto1 {
+  padding-bottom: 10px;
+  line-height: 35px;
+}
+
+.conjunto1 {
+  justify-content: space-between;
+  display: flex;
+}
+
+form {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Maven Pro";
+}
+
+.colores {
+  margin-right: 18px;
+}
+
+.medidas {
+  width: 50px;
+  border-radius: 10%;
+  margin: 0% 2px;
+}
+
+.card-text {
+  font-family: "Homenaje";
+  font-size: 19px;
+}
+
+.card-img-top {
+  border: 5px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  width: 50vh;
+  margin: auto;
+}
+
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+.bloque {
+  background-color: rgba(53, 53, 53, 0.5);
+  padding: 5px 20px 20px 20px;
+  margin: 30px 10% 5px 10%;
+  border-radius: 2%;
+}
+
+.filaUno {
+  align-items: center;
+  display: flex;
+}
+
+#primerParrafo {
+  display: inline;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 40px;
+  grid-area: p;
+}
+
+.animate__slideInLeft {
+  animation-duration: 3.5s;
+  animation-delay: 0.2s;
+}
+
+div a {
+  color: #fcec04;
+  font-size: 40px;
+}
+
+.delado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5%;
+}
+
 ul {
   padding-left: 0;
 }
@@ -396,12 +424,6 @@ ul {
 .form-select {
   width: auto;
   display: inline;
-}
-
-.medidas {
-  width: 50px;
-  border-radius: 10%;
-  margin: 0% 2px;
 }
 
 .renglon {
@@ -432,26 +454,8 @@ ul {
   justify-items: center;
 }
 
-h5 {
-  font-family: "Contrail One", cursive;
-  font-size: 22px;
-  color: #fcec04;
-}
-
-.ladoUno {
-  padding-left: 0;
-}
-
 .flex-nowrap {
   margin-bottom: 10px;
-}
-
-.colores {
-  margin-right: 18px;
-}
-
-.aqui {
-  color: #fcec04;
 }
 
 @media (max-width: 860px) {
@@ -498,8 +502,8 @@ h5 {
     width: 100%;
   }
   .img {
-    height: 28vw;
     width: 28vw;
+    height: 28vw;
   }
   .bloqueF {
     margin: 10px 7%;
@@ -557,8 +561,8 @@ h5 {
     font-size: 40px;
   }
   ul {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     position: fixed;
     background: black;
     top: 80px;
@@ -605,8 +609,8 @@ li a.active {
     width: 100%;
   }
   .d-block {
-    height: 75vw;
     width: 75vw;
+    height: 75vw;
     object-fit: cover;
   }
   .carousel-inner {
