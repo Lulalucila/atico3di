@@ -1,52 +1,38 @@
-.pieFoto{
-    font-family: $fuente1;
-    font-size: 23px;
-    color: $color1;
-    text-shadow: 2px 2px 2px #000000;
-}
-.bloqueP {
+.bloqueProductos {
     background-color: $colorBG;
     padding: $padding1;
     margin: $margin1;
     display: grid;
     border-radius: 2%;
     justify-items: center;
-}
-.carousel {
-    height: 60vh;
-}
-.img {
-    margin: 5px;
-}
-.d-block{
-    @include dimension(80vh, 80vh);
-    object-fit: cover;
-}
-.carousel {
-    height: 60vh;
-}
-.carousel-inner{
-    height: 100%;    
-}
-.carousel-item{
-    height: 100%;
-    img{
-        height: 70%;
-        width: auto;
-        margin: auto;
-        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+    #carouselExampleIndicators{
+        width: 80vh;
+        height: 60vh;
+        .carousel-inner{
+            height: 100%;  
+            .carousel-item{
+                height: 100%;
+                img{
+                    @include dimension(auto, 75%);
+                    margin: auto;
+                    object-fit: cover;
+                    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+                }
+                p{
+                    height: 30%;
+                    padding: 10px 20px;
+                    font-family: $fuente1;
+                    font-size: 23px;
+                    color: $color1;
+                    text-shadow: 2px 2px 2px #000000;
+                }
+            }  
+        }
     }
-    p{
-        height: 30%;
-        padding: 10px 20px;
-    }
-}
-#carouselExampleIndicators{
-    width: 80vh;
 }
 .pull-right{
     text-align: center;
-    .barra{
+    .textoInput{
         padding: 5px 13px;
         outline: none;
         border-radius: 30px;
@@ -65,6 +51,39 @@
             color: $color1;
             transition: all 0.2s;        
         }
-
     }
+}
+@media (max-width: 860px){
+    .bloqueProductos {
+        padding: 5px 5px 5px 5px;
+        margin: 5% 13%;
+    }
+    .img {
+        @include dimension(28vw, 28vw);
+    }
+}
+@media (max-width: 623px){
+    .bloqueProductos {
+        margin: 5%;
+        padding: 2%;
+        #carouselExampleIndicators{
+            width: 75vw ;
+            .carousel-inner{
+                margin: auto;
+                .carousel-item{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }    
+    }    
+    .textoInput{
+        width: 70vw;
+    }
+}
+@media (max-width: 509px) {
+    .ir{
+        margin-top: 10px;
+}
 }

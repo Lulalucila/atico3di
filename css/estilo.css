@@ -55,14 +55,6 @@ h2 {
   -webkit-text-stroke: 0.8px black;
 }
 
-p {
-  padding: 0px 7%;
-  color: rgba(255, 255, 255, 0.875);
-  letter-spacing: 0.8px;
-  word-spacing: 3px;
-  line-height: 30px;
-}
-
 h4 {
   font-family: "Maven Pro";
   font-weight: bold;
@@ -77,6 +69,21 @@ h5 {
   color: #fcec04;
 }
 
+p {
+  padding: 0px 7%;
+  color: rgba(255, 255, 255, 0.875);
+  letter-spacing: 0.8px;
+  word-spacing: 3px;
+  line-height: 30px;
+}
+
+.bloque {
+  background-color: rgba(53, 53, 53, 0.5);
+  padding: 5px 20px 20px 20px;
+  margin: 30px 10% 5px 10%;
+  border-radius: 2%;
+}
+
 body {
   background-image: url(../assets/img/fondo.jpg);
   background-size: cover;
@@ -84,6 +91,33 @@ body {
   background-attachment: fixed;
 }
 
+@media (max-width: 860px) {
+  h1 {
+    margin-top: 0px;
+  }
+  p {
+    padding: 0px;
+  }
+  .bloque {
+    margin: 5% 7%;
+  }
+}
+@media (max-width: 623px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .bloque {
+    padding: 0% 5% 5% 5%;
+    margin: 5%;
+    z-index: 1;
+  }
+}
 nav {
   width: 100%;
   height: 80px;
@@ -92,9 +126,35 @@ nav {
   z-index: 3;
   display: flex;
 }
+nav #check {
+  display: none;
+}
+nav .prelogo {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+nav .prelogo .logo {
+  width: auto;
+  height: 80%;
+  animation-duration: 3.5s;
+  animation-delay: 0.2s;
+}
+nav .btn {
+  margin-left: auto;
+  color: white;
+  font-size: 30px;
+  line-height: 70px;
+  margin: auto 20px auto auto;
+  cursor: pointer;
+  display: none;
+}
+nav .btn.active {
+  color: white;
+}
 nav ul {
   margin-left: auto;
   margin-right: 20px;
+  padding-left: 0;
 }
 nav ul li {
   display: inline-block;
@@ -116,37 +176,82 @@ nav ul li a {
 nav ul li a:hover {
   color: #fcec04;
 }
-
-.btn {
-  margin-left: auto;
-  color: white;
-  font-size: 30px;
-  line-height: 70px;
-  margin-right: 10px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-.aqui {
+nav ul li .aqui {
   color: #fcec04;
 }
 
-.prelogo {
-  padding-top: 10px;
-  padding-left: 10px;
+@media (max-width: 860px) {
+  nav {
+    width: 100vw;
+  }
+  nav ul {
+    margin-right: 5px;
+  }
+  nav ul li a {
+    font-size: 15px;
+    padding: 3px;
+  }
 }
-
-.logo {
-  width: auto;
-  height: 80%;
+@media (max-width: 623px) {
+  nav {
+    z-index: 3;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+  nav .btn {
+    display: block;
+  }
+  nav ul {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
 }
-
 footer {
   text-align: center;
+}
+footer .flecha {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  size: 120px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #fcec04;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+}
+footer .flecha:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  color: #fcec04;
+}
+footer .flecha:active {
+  transform: scale(1);
+}
+footer div a {
+  color: #fcec04;
+  font-size: 40px;
 }
 
 .fa-instagram:hover {
@@ -164,33 +269,7 @@ footer {
   font-family: "Maven Pro";
 }
 
-.flecha {
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  border-radius: 50%;
-  size: 120px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #fcec04;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-}
-.flecha:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
-  color: #fcec04;
-}
-.flecha:active {
-  transform: scale(1);
-}
-
-.bloqueG {
+.bloqueIndex {
   background-color: rgba(53, 53, 53, 0.5);
   margin: 0% 10%;
   column-gap: 5px;
@@ -199,12 +278,10 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "h2 h2" "img p";
 }
-
-.tituloP {
+.bloqueIndex .tituloIndex {
   grid-area: h2;
 }
-
-.impresora3D {
+.bloqueIndex .impresora3D {
   width: auto;
   display: inline;
   align-items: center;
@@ -214,15 +291,39 @@ footer {
   background-position: right;
   margin-left: 15px;
 }
-
-.pieFoto {
-  font-family: "Contrail One", cursive;
-  font-size: 23px;
-  color: #fcec04;
-  text-shadow: 2px 2px 2px #000000;
+.bloqueIndex #parrafoIndex {
+  display: inline;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 40px;
+  grid-area: p;
 }
 
-.bloqueP {
+@media (max-width: 860px) {
+  .bloqueIndex {
+    grid-template-columns: 1fr;
+    grid-template-areas: "h2" "p";
+    padding: 20px 7%;
+  }
+  .bloqueIndex .impresora3D {
+    display: none;
+  }
+  .bloqueIndex #parrafoIndex {
+    justify-self: center;
+    background-image: url(../assets/img/imagen-impresora-opaca.jpg);
+    background-size: cover;
+    padding: 25px;
+    text-align: center;
+    backdrop-filter: brightness(20%);
+  }
+}
+@media (max-width: 623px) {
+  .bloqueIndex {
+    padding: 0% 5% 5% 5%;
+    margin: 5%;
+  }
+}
+.bloqueProductos {
   background-color: rgba(53, 53, 53, 0.5);
   padding: 5px 20px 20px 20px;
   margin: 30px 10% 5px 10%;
@@ -230,51 +331,36 @@ footer {
   border-radius: 2%;
   justify-items: center;
 }
-
-.carousel {
-  height: 60vh;
-}
-
-.img {
-  margin: 5px;
-}
-
-.d-block {
+.bloqueProductos #carouselExampleIndicators {
   width: 80vh;
-  height: 80vh;
-  object-fit: cover;
-}
-
-.carousel {
   height: 60vh;
 }
-
-.carousel-inner {
+.bloqueProductos #carouselExampleIndicators .carousel-inner {
   height: 100%;
 }
-
-.carousel-item {
+.bloqueProductos #carouselExampleIndicators .carousel-inner .carousel-item {
   height: 100%;
 }
-.carousel-item img {
-  height: 70%;
+.bloqueProductos #carouselExampleIndicators .carousel-inner .carousel-item img {
   width: auto;
+  height: 75%;
   margin: auto;
+  object-fit: cover;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
 }
-.carousel-item p {
+.bloqueProductos #carouselExampleIndicators .carousel-inner .carousel-item p {
   height: 30%;
   padding: 10px 20px;
-}
-
-#carouselExampleIndicators {
-  width: 80vh;
+  font-family: "Contrail One", cursive;
+  font-size: 23px;
+  color: #fcec04;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .pull-right {
   text-align: center;
 }
-.pull-right .barra {
+.pull-right .textoInput {
   padding: 5px 13px;
   outline: none;
   border-radius: 30px;
@@ -295,6 +381,55 @@ footer {
   transition: all 0.2s;
 }
 
+@media (max-width: 860px) {
+  .bloqueProductos {
+    padding: 5px 5px 5px 5px;
+    margin: 5% 13%;
+  }
+  .img {
+    width: 28vw;
+    height: 28vw;
+  }
+}
+@media (max-width: 623px) {
+  .bloqueProductos {
+    margin: 5%;
+    padding: 2%;
+  }
+  .bloqueProductos #carouselExampleIndicators {
+    width: 75vw;
+  }
+  .bloqueProductos #carouselExampleIndicators .carousel-inner {
+    margin: auto;
+  }
+  .bloqueProductos #carouselExampleIndicators .carousel-inner .carousel-item p {
+    font-size: 18px;
+  }
+  .textoInput {
+    width: 70vw;
+  }
+}
+@media (max-width: 509px) {
+  .ir {
+    margin-top: 10px;
+  }
+}
+.seccionUno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5%;
+}
+.seccionUno .seccionTexto {
+  padding-left: 0;
+}
+.seccionUno .seccionVideo {
+  margin: 0px 20px;
+  height: 70vh;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
 .filamento {
   background-image: url(../assets/img/filamento.jpg);
   background-repeat: no-repeat;
@@ -307,223 +442,11 @@ footer {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
 }
 
-.slowmo {
-  margin: 0px 20px;
-  height: 70vh;
-  border: 3px solid #000000;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-}
-
-.ladoUno {
-  padding-left: 0;
-}
-
-.boton {
-  background-color: #fcec04;
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-.boton:hover {
-  background-color: rgba(46, 46, 46, 0.7176470588);
-  color: #fcec04;
-  transition: all 0.2s;
-}
-
-.bloqueF {
-  background-color: rgba(53, 53, 53, 0.5);
-  padding: 5px 20px 20px 20px;
-  margin: 30px 10% 5px 10%;
-  border-radius: 2%;
-}
-
-.conjunto, .conjunto1 {
-  padding-bottom: 10px;
-  line-height: 35px;
-}
-
-.conjunto1 {
-  justify-content: space-between;
-  display: flex;
-}
-
-form {
-  color: white;
-  text-align: left;
-  font-size: 20px;
-  font-family: "Maven Pro";
-}
-
-.colores {
-  margin-right: 18px;
-}
-
-.medidas {
-  width: 50px;
-  border-radius: 10%;
-  margin: 0% 2px;
-}
-
-.card-text {
-  font-family: "Homenaje";
-  font-size: 19px;
-}
-
-.card-img-top {
-  border: 5px solid #000000;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-  width: 50vh;
-  margin: auto;
-}
-
-.row {
-  --bs-gutter-x: 0rem;
-}
-
-.bloque {
-  background-color: rgba(53, 53, 53, 0.5);
-  padding: 5px 20px 20px 20px;
-  margin: 30px 10% 5px 10%;
-  border-radius: 2%;
-}
-
-.filaUno {
-  align-items: center;
-  display: flex;
-}
-
-#primerParrafo {
-  display: inline;
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 40px;
-  grid-area: p;
-}
-
-.animate__slideInLeft {
-  animation-duration: 3.5s;
-  animation-delay: 0.2s;
-}
-
-div a {
-  color: #fcec04;
-  font-size: 40px;
-}
-
-.delado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 5%;
-}
-
-ul {
-  padding-left: 0;
-}
-
-.form-select {
-  width: auto;
-  display: inline;
-}
-
-.renglon {
-  margin: 3px 0%;
-  display: flex;
-}
-
-.cuadro1 {
-  align-items: flex-end;
-}
-
-.cuadro2 {
-  justify-content: start;
-}
-
-.input-group {
-  margin: 3px 0px;
-}
-
-.card {
-  width: 30vw;
-  margin: 5% 0px;
-}
-
-.row {
-  display: grid;
-  grid-template-areas: "img1 img2" "img3 img4";
-  justify-items: center;
-}
-
-.flex-nowrap {
-  margin-bottom: 10px;
-}
-
 @media (max-width: 860px) {
-  nav {
-    width: 100vw;
-  }
-  .bloqueG {
-    grid-template-columns: 1fr;
-    grid-template-areas: "h2" "p";
-    padding: 20px 7%;
-  }
-  .impresora3D {
-    display: none;
-  }
-  nav ul {
-    margin-right: 5px;
-  }
-  nav ul li a {
-    font-size: 15px;
-    padding: 3px;
-  }
-  h1 {
-    margin-top: 0px;
-  }
-  p {
-    padding: 0px;
-  }
-  #primerParrafo {
-    justify-self: center;
-    background-image: url(../assets/img/imagen-impresora-opaca.jpg);
-    background-size: cover;
-    padding: 25px;
-    text-align: center;
-    backdrop-filter: brightness(20%);
-  }
-  .bloque {
-    margin: 5% 7%;
-  }
-  .bloqueP {
-    padding: 5px 5px 5px 5px;
-    margin: 5% 13%;
-  }
-  .card-img-top {
-    width: 100%;
-  }
-  .img {
-    width: 28vw;
-    height: 28vw;
-  }
-  .bloqueF {
-    margin: 10px 7%;
-  }
-  textarea {
-    max-width: 80vw;
-  }
-  .renglon {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-  }
-  .conjunto1 {
-    display: grid;
-    justify-content: left;
-  }
-  .delado {
+  .seccionUno {
     margin: 0px;
   }
-  .slowmo {
+  .seccionUno .seccionVideo {
     margin-right: 0px;
   }
   .filamento {
@@ -532,106 +455,132 @@ ul {
   }
 }
 @media (max-width: 623px) {
-  .bloqueG {
-    padding: 0% 5% 5% 5%;
-    margin: 5%;
+  .seccionVideo {
+    display: none;
   }
-  nav {
-    z-index: 3;
+}
+.botonAmarillo {
+  background-color: #fcec04;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.botonAmarillo:hover {
+  background-color: rgba(46, 46, 46, 0.7176470588);
+  color: #fcec04;
+  transition: all 0.2s;
+}
+
+.bloqueFormulario {
+  background-color: rgba(53, 53, 53, 0.5);
+  padding: 5px 20px 20px 20px;
+  margin: 30px 10% 5px 10%;
+  border-radius: 2%;
+}
+.bloqueFormulario form {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Maven Pro";
+}
+
+.conjuntoColores, .conjuntoMedidas {
+  padding-bottom: 10px;
+  line-height: 35px;
+}
+
+.conjuntoMedidas {
+  justify-content: space-between;
+  display: flex;
+}
+.conjuntoMedidas .renglonMedidas {
+  margin: 3px 0%;
+  display: flex;
+}
+.conjuntoMedidas .renglonMedidas .form-select {
+  width: auto;
+  display: inline;
+}
+.conjuntoMedidas .renglonMedidas .medidas {
+  width: 50px;
+  border-radius: 10%;
+  margin: 0% 2px;
+}
+.conjuntoMedidas .renglonMedidas .altoUnidad {
+  justify-content: start;
+}
+
+.colores {
+  margin-right: 18px;
+}
+
+.input-group {
+  margin: 2px 0px 8px 0px;
+}
+
+@media (max-width: 860px) {
+  textarea {
+    max-width: 80vw;
   }
-  li:hover {
-    transform: scale(1.5);
-    transition: all 0.3s;
+  .bloqueFormulario {
+    margin: 10px 7%;
   }
-  .bloque {
-    padding: 0% 5% 5% 5%;
-    margin: 5%;
-    z-index: 1;
+  .conjuntoMedidas {
+    display: grid;
+    justify-content: left;
   }
-  .btn {
-    display: block;
+  .conjuntoMedidas .renglonMedidas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
   }
-  p {
-    font-size: 18px;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  ul {
+}
+.card {
+  width: 30vw;
+  margin: 5% 0px 0px 0px;
+}
+.card .card-img-top {
+  border: 5px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+  width: 50vh;
+  margin: auto;
+}
+.card .card-text {
+  font-family: "Homenaje";
+  font-size: 19px;
+}
+
+.row {
+  --bs-gutter-x: 0rem;
+  display: grid;
+  grid-template-areas: "img1 img2" "img3 img4";
+  justify-items: center;
+}
+
+@media (max-width: 860px) {
+  .card .card-img-top {
     width: 100%;
-    height: 100vh;
-    position: fixed;
-    background: black;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
   }
-  nav ul li {
-    display: block;
-    margin: 50px 0px;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 18px;
-  }
-  li a:hover,
-li a.active {
-    background: none;
-    color: #fcec04;
-  }
-  #check:checked ~ ul {
-    left: 0;
-  }
-  .bloqueP {
-    margin: 5%;
-    padding: 0%;
-  }
-  .row {
-    display: block;
-  }
-  .card-img-top {
-    width: 60vw;
-  }
-  .card-text {
-    width: 100%;
-  }
+}
+@media (max-width: 623px) {
   .card {
     align-items: center;
     width: 60vw;
     margin-left: auto;
     margin-right: auto;
   }
-  .card-title {
+  .card .card-img-top {
+    height: 60vw;
+    width: 60vw;
+  }
+  .card .card-title {
     width: 100%;
   }
-  .d-block {
-    width: 75vw;
-    height: 75vw;
-    object-fit: cover;
-  }
-  .carousel-inner {
-    width: 75vw;
-  }
-  #carouselExampleIndicators {
-    width: 75vw;
-  }
-  .cambio {
+  .card .card-text {
     width: 100%;
   }
-  .slowmo {
-    display: none;
-  }
-  .barra {
-    width: 70vw;
-  }
-}
-@media (max-width: 509px) {
-  .ir {
-    margin-top: 10px;
+  .row {
+    display: block;
   }
 }
 

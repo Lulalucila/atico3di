@@ -1,4 +1,4 @@
-.boton {
+.botonAmarillo {
     background-color: $color1;
     padding: 5px 10px;
     border-radius: 10px;
@@ -8,32 +8,63 @@
         transition: all 0.2s;    
     }
 }
-.bloqueF {
+.bloqueFormulario {
     background-color: $colorBG;
     padding: $padding1;
     margin: $margin1;
     border-radius: 2%;
+    form {
+        color: white;
+        text-align: left;
+        font-size: 20px;
+        font-family: $fuente3;
+    }
 }
-.conjunto {
+.conjuntoColores {
     padding-bottom: 10px;
     line-height: 35px;
     }
-.conjunto1 {
+.conjuntoMedidas {
     justify-content: space-between;
     display: flex;    
-    @extend .conjunto
-}
-form {
-    color: white;
-    text-align: left;
-    font-size: 20px;
-    font-family: $fuente3;
+    @extend .conjuntoColores;
+    .renglonMedidas {
+        margin: 3px 0%;
+        display: flex;
+        .form-select {
+            width: auto;
+            display: inline;
+        }
+        .medidas {
+            width: 50px;
+            border-radius: 10%;
+            margin: 0% 2px;
+        } 
+        .altoUnidad{
+            justify-content: start;
+            }
+    }
 }
 .colores{
     margin-right: 18px;
 }
-.medidas {
-    width: 50px;
-    border-radius: 10%;
-    margin: 0% 2px;
+.input-group {
+    margin: 2px 0px 8px 0px;
+}
+@media (max-width: 860px){
+    textarea {
+        max-width: 80vw;
+    }
+    .bloqueFormulario {
+        margin: 10px 7%;
+    }
+    .conjuntoMedidas{
+        display: grid;
+        justify-content: left;
+        .renglonMedidas{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: left;
+        }
+    }
 }

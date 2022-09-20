@@ -16,14 +16,11 @@ $principales: (
     50px: $fuente2,
     23px: $fuente3,
 ) ;
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: 0;
 }
-
-
 @each $size, $fuente in $principales{
     .style--#{$size} {
         font-size: $size;
@@ -63,13 +60,6 @@ h2 {
     color: rgb(252, 236, 4, 0.9);
     -webkit-text-stroke: 0.8px black;
 }
-p {
-    padding: 0px 7%;
-    color: rgba(255, 255, 255, 0.875);
-    letter-spacing: 0.8px;
-    word-spacing: 3px;
-    line-height: 30px;
-}
 h4 {
     font-family: $fuente3;
     font-weight: bold;
@@ -82,9 +72,49 @@ h5{
     font-size: 22px;
     color: $color1;
 }
+p {
+    padding: 0px 7%;
+    color: rgba(255, 255, 255, 0.875);
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+.bloque {
+    background-color: $colorBG;
+    padding: $padding1;
+    margin: $margin1;
+    border-radius: 2%;
+}
 body {
     background-image: url(../assets/img/fondo.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+}
+@media (max-width: 860px){
+    h1 {
+        margin-top: 0px;
+    }
+    p {
+        padding: 0px;
+    }
+    .bloque {
+        margin: 5% 7%;
+    }
+}
+@media (max-width: 623px){
+    h1 {
+        font-size: 40px
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .bloque {
+        padding: 0% 5% 5% 5%;
+        margin: 5%;
+        z-index: 1;
+    }
 }

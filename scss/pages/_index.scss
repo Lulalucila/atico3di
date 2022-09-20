@@ -1,4 +1,4 @@
-.bloqueG {
+.bloqueIndex {
     background-color: $colorBG;
     margin: 0% 10%;
     column-gap: 5px;
@@ -7,18 +7,51 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
         "h2 h2"
-        "img p"
-}
-.tituloP {
-    grid-area: h2;
-}
-.impresora3D {
-    width: auto;
+        "img p";
+    .tituloIndex {
+        grid-area: h2;
+    }
+    .impresora3D {
+        width: auto;
+        display: inline;
+        align-items: center;
+        grid-area: img;
+        background-image: url("../assets/img/imagen-impresora.jpg");
+        background-size: cover;
+        background-position: right;
+        margin-left: 15px;
+    }
+#parrafoIndex {
     display: inline;
-    align-items: center;
-    grid-area: img;
-    background-image: url("../assets/img/imagen-impresora.jpg");
-    background-size: cover;
-    background-position: right;
-    margin-left: 15px;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 40px;
+    grid-area: p;
+} 
+}
+@media (max-width: 860px){    
+.bloqueIndex {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "h2"
+        "p";
+    padding: 20px 7%;
+    .impresora3D {
+        display: none;
+    }
+    #parrafoIndex {
+        justify-self: center;
+        background-image: url(../assets/img/imagen-impresora-opaca.jpg);
+        background-size: cover;
+        padding: 25px;
+        text-align: center;
+        backdrop-filter: brightness(20%);
+    }
+}
+}
+@media (max-width: 623px){
+    .bloqueIndex {
+        padding: 0% 5% 5% 5%;
+        margin: 5%;
+    }
 }

@@ -1,41 +1,45 @@
 footer {
     text-align: center;
+    .flecha {
+        @include dimension(40px, 40px);
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 50%;
+        size: 120px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 40px;
+        text-decoration: none;
+        color: $color1;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
+        &:hover {
+            transform: scale(1.2);
+            transition: all 0.5s;
+            color: $color1
+        }
+        &:active {
+            transform: scale(1);
+        }
+    }
+    div a {
+        color: $color1;
+        font-size: 40px;
+    }
 }
 .fa-instagram{
     &:hover {
 transform: scale(1.2);
 transition: all 0.3s;
 color:$color1;
-}
+    }
     &:visited {
         color: $color1;}
-    }
+}
 .copyright {
 font-size: 12px;
 padding: 10px;
 font-family: $fuente3;
-}
-.flecha {
-    @include dimension(40px, 40px);
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border-radius: 50%;
-    size: 120px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 40px;
-    text-decoration: none;
-    color: $color1;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.49);
-    &:hover {
-        transform: scale(1.2);
-        transition: all 0.5s;
-        color: $color1
-    }
-    &:active {
-        transform: scale(1);
-    }
 }

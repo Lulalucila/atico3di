@@ -4,9 +4,34 @@ nav {
     position: fixed;
     z-index: 3;
     display:flex;
+    #check {
+        display: none;
+    }
+    .prelogo {
+        padding-top: 10px;
+        padding-left: 10px;
+        .logo {
+            @include dimension(auto, 80%);
+            animation-duration: 3.5s;
+            animation-delay: 0.2s;
+        }
+    }
+    .btn {
+        margin-left: auto;
+        color: white;
+        font-size: 30px;
+        line-height: 70px;
+        margin: auto 20px auto auto;
+        cursor: pointer;
+        display: none;
+        &.active{
+            color: white;
+        }
+    }
     ul {        
         margin-left: auto;
         margin-right: 20px;
+        padding-left: 0;
         li {            
             display: inline-block;
             line-height: 80px;
@@ -26,29 +51,49 @@ nav {
                     color: $color1;
                 }
             }
+            .aqui{
+                color: $color1;
+            }
         }
     }
 }
-
-.btn {
-    margin-left: auto;
-    color: white;
-    font-size: 30px;
-    line-height: 70px;
-    margin-right: 10px;
-    cursor: pointer;
-    display: none;
+@media (max-width: 860px) {
+    nav {
+        width: 100vw;
+        ul {
+            margin-right: 5px;
+            li a {
+                font-size: 15px;
+                padding: 3px;
+            }
+        }
+    }
 }
-#check {
-    display: none;
-}
-.aqui{
-    color: $color1;
-}
-.prelogo {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-.logo {
-    @include dimension(auto, 80%);
+@media (max-width: 623px){
+    nav {
+        z-index: 3;
+        #check:checked~ul {
+            left: 0;
+        }
+        .btn {
+            display: block;
+        }
+        ul {
+            @include dimension(100%, 100vh);
+            position: fixed;
+            background: black;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all 0.5s;        
+            li {
+                display: block;
+                margin: 50px 0px;
+                line-height: 30px;                
+                a {
+                font-size: 18px;
+                }
+            }
+        }
+    }
 }
